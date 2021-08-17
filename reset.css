@@ -17,6 +17,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+	color: white;
 }
 body {
 	line-height: 1;
@@ -52,5 +53,5 @@ table {
 	border-spacing: 0;
 }
 
-input,button,select,textarea{outline:none}
+input,button,select,textarea{outline:none;background-color: white;}
 textarea{resize:none; border:none;}

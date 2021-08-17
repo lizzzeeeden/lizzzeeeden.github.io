@@ -1,3 +1,8 @@
+body {
+    background-color: rgb(30, 30, 30);
+
+}
+
 #framework {
     width: 80%;
     max-width: 50rem;
@@ -15,17 +20,18 @@
     margin-top: 1rem;
     margin-bottom: 3rem;
 
-    border: 0.5rem double black;
+    border: 0.5rem double white;
 
     text-align: center;
     font-size: 1.5rem;
 }
 
-/* 黑条 */
+/* 白框 */
 div.blackblock {
-    background-color: black;
+    background-color: white;
     width: 10rem;
     height: 3rem;
+    border-radius: 10px;
 
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -35,7 +41,7 @@ div.blackblock {
 
 /* 每行标题 */
 span.title {
-    color: white;
+    color: black;
     font-size: 1.3rem;
 }
 
@@ -46,12 +52,12 @@ hr.segment {
 
     border: 0;
     height: 0.2rem;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
 }
 
 /* 超链接 */
 a:link {
-    color: rgb(231, 80, 25);
+    color: rgb(250, 126, 81);
     text-decoration: none;
 
     /* color: rgb(0, 0, 0); */
@@ -62,7 +68,7 @@ a:hover {
 }
 
 a:visited {
-    color: rgb(11, 175, 204);
+    color: rgb(121, 223, 241);
 
     /* color: rgb(0, 0, 0); */
 
@@ -97,10 +103,9 @@ div#interactstory a {
 }
 
 #game iframe {
-    width: 80%;
-    min-width: 30rem;
-    height: 25rem;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
 
     margin: 1rem auto;
-
 }

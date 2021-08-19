@@ -51,7 +51,7 @@ del {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+}s
 
-input,button,select,textarea{outline:none;background-color: white;}
+input,button,select,textarea{outline:none;}
 textarea{resize:none; border:none;}

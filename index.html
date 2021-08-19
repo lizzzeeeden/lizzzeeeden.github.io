@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./script.js"></script>
     <title>lizzzeeeden</title>
 
@@ -22,42 +22,205 @@
             </div>
         </div>
 
-        <hr class="segment" /><!-- ============================================================== -->
-        <div class="part" id="interactstory" style="white-space: nowrap;">
+
+        <hr class="segment" /><!-- 交互故事============================================================== -->
+        <div class="part" id="interactstory">
             <div class="blackblock"><span class="title">交互故事</span></div>
 
             <div>
                 <a href="https://lizzzeeeden.github.io/GlassTop/" target="_blank" style="font-weight: bold;">《玻璃穹顶》</a>
-                <hr />
+                <hr class="connect" />
                 <a href="./file/玻璃穹顶流程图.png" target="_blank">流程图</a>
-                <hr />
+                <hr class="connect" />
                 <a href="./file/玻璃穹顶.pptx">ppt格式下载</a>
             </div>
 
         </div>
 
-        <hr class="segment" /><!-- ============================================================== -->
+        <hr class="segment" /><!-- 游戏============================================================== -->
         <div class="part" id="game">
             <div class="blackblock"><span class="title">游戏</span></div>
 
-            <div>
+            <!-- 一二三立生*****id=7310*********************************-->
+            <div class="gamebox">
                 <p class="gamename">《一二三立生》</p>
-                <div style="width: 100%;">
+                <!-- 视频 -->
+                <button class="videobtn" id="btn_video_7310" onclick="togglevideo('video_7310')">游戏视频</button>
+                <div id="video_7310" class="videobox">
                     <iframe
-                        src="https://player.bilibili.com/player.html?aid=889746405&bvid=BV1pP4y1W7fP&cid=386230384&page=1&high_quality=1"
-                        scrolling="no" bor frameborder="no" framespacing="0" allowfullscreen="true">
+                        src="https://player.bilibili.com/player.html?aid=889746405&bvid=BV1pP4y1W7fP&cid=386230384&page=1&high_quality=1&danmaku=0"
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true">
                     </iframe>
                 </div>
-                <a href="https://pan.baidu.com/s/1rmi5FhpDun0zgwKwDXfOew">下载链接</a>&nbsp;&nbsp;&nbsp;
-                <span>提取码：</span>
-                <textarea class="copycontent" readonly
-                    style="width: 4rem;height: 1rem;vertical-align: middle;background-color: rgb(30, 30, 30);color: white;">li20</textarea>
-                <input type="button" onclick="copy(0)" value="复制"></input>
+                <!-- 介绍 -->
+                <p>游戏程序设计课作业，使用一位师哥的自研引擎制作</p>
 
+                <hr class="vconnect" />
+                <!-- 下载链接 -->
+                <p>
+                    <a href="https://pan.baidu.com/s/1rmi5FhpDun0zgwKwDXfOew">游戏下载</a>&nbsp;&nbsp;&nbsp;
+                    <span>提取码：</span>
+                    <textarea id="copy_7310" class="copycontent" readonly>li20</textarea>
+                    <button onclick="copy('copy_7310')">复制</button>
+                </p>
+
+                <hr class="vconnect" />
+                <!-- 策划文档 -->
+                <p><a href="./file/一二三立生策划文档.pdf" target="_blank">设计文档</a></p>
+            </div>
+
+            <!-- 一件礼物，要送给昼盲的她……*****index=dayblind*******************-->
+            <div class="gamebox">
+                <p class="gamename">《一件礼物，要送给昼盲的她……》</p>
+
+                <!-- 视频 -->
+                <button id="btn_video_dayblind" class="videobtn" onclick="togglevideo('video_dayblind')">游戏视频</button>
+                <div id="video_dayblind" class="videobox">
+                    <iframe
+                        src="https://player.bilibili.com/player.html?aid=546651919&bvid=BV15q4y1W7zM&cid=371119347&page=1&high_quality=1&danmaku=0"
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true">
+                    </iframe>
+                </div>
+                <!-- 介绍 -->
+                <p>人机交互课作业，使用arduino+unity制作</p>
+                <hr class="vconnect" />
+                <!-- 策划文档 -->
+                <p> <a href="./file/昼盲礼物设计文档.pdf" target="_blank">设计文档</a> </p>
+            </div>
+
+            <!-- 玛琳巴德哀歌***********index=mlbd*************************** -->
+            <div class="gamebox">
+                <p class="gamename">《Mourning of Malinbad》</p>
+                <!-- 视频 -->
+                <button id="btn_video_mlbd" class="videobtn" onclick="togglevideo('video_mlbd')">游戏视频</button>
+                <div id="video_mlbd" class="videobox">
+                    <iframe
+                        src="https://player.bilibili.com/player.html?aid=931333530&bvid=BV1PM4y1g75H&cid=358761127&page=1&high_quality=1&danmaku=0"
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true">
+                    </iframe>
+                </div>
+
+                <!-- 下载链接 -->
+                <p>
+                    <a href="https://pan.baidu.com/s/1xlEtPRezlHS_hJ0d8S-j0w">游戏下载</a>&nbsp;&nbsp;&nbsp;
+                    <span>提取码：</span>
+                    <textarea id="copy_mlbd" class="copycontent" readonly>kc5n</textarea>
+                    <button onclick="copy('copy_mlbd')">复制</button>
+                </p>
+
+                <hr class="vconnect" />
+
+                <!-- 制作信息 -->
+                <p>汪汪大队出品</p>
+                <p>策划：阿糸</p>
+                <p>美术：晨雾、旺财</p>
+                <p>程序：羚灯</p>
+            </div>
+
+            <!-- 雨林饭***************index=rainforestrice*********************** -->
+            <div class="gamebox">
+                <p class="gamename">《Cocina de la selva（雨林饭）》</p>
+
+                <!-- 视频 -->
+                <button id="btn_video_rainforestrice" class="videobtn"
+                    onclick="togglevideo('video_rainforestrice')">游戏视频</button>
+                <div id="video_rainforestrice" class="videobox">
+                    <iframe
+                        src="https://player.bilibili.com/player.html?aid=630088115&bvid=BV1bb4y1D7Ug&cid=324571595&page=1&high_quality=1&danmaku=0"
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true">
+                    </iframe>
+                </div>
+                <!-- 下载链接 -->
+                <p>
+                    <a href="https://pan.baidu.com/s/1cL0ivunSuDnunAziGWqoZg">游戏下载</a>&nbsp;&nbsp;&nbsp;
+                    <span>提取码：</span>
+                    <textarea id="copy_rainforestrice" class="copycontent" readonly>nx5c</textarea>
+                    <button onclick="copy('copy_rainforestrice')">复制</button>
+                </p>
+
+                <hr class="vconnect" />
+
+                <!-- 制作信息 -->
+                <p>汪汪大队出品</p>
+                <p>策划：阿糸</p>
+                <p>美术：晨雾、旺财</p>
+                <p>程序：羚灯</p>
+            </div>
+
+            <!-- 终末旅行2***********id=finaltrip2*************************** -->
+            <div class="gamebox">
+                <p class="gamename">《终末旅行Ⅱ》</p>
+
+                <!-- 视频 -->
+                <button id="btn_video_finaltrip2" class="videobtn"
+                    onclick="togglevideo('video_finaltrip2')">游戏视频</button>
+                <div id="video_finaltrip2" class="videobox">
+                    <iframe
+                        src="https://player.bilibili.com/player.html?aid=799996261&bvid=BV1my4y1b7vv&cid=317973675&page=1&high_quality=1&danmaku=0"
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true">
+                    </iframe>
+                </div>
+
+                <!-- 下载链接 -->
+                <p>
+                    <a href="https://pan.baidu.com/s/14qfNLlKNzto7NgZZMOmEuQ">游戏下载</a>&nbsp;&nbsp;&nbsp;
+                    <span>提取码：</span>
+                    <textarea id="copy_finaltrip2" class="copycontent" readonly>q0yn</textarea>
+                    <button onclick="copy('copy_finaltrip2')">复制</button>
+                </p>
+
+                <hr class="vconnect" />
+
+                <!-- 制作信息 -->
+                <p>汪汪大队出品</p>
+                <p>策划：阿糸</p>
+                <p>美术：晨雾、旺财</p>
+                <p>程序：羚灯</p>
+            </div>
+
+            <!-- 终末旅行************************************** -->
+            <div class="gamebox">
+                <p class="gamename">《终末旅行》</p>
+
+                <!-- 视频 -->
+                <button id="btn_video_finaltrip" class="videobtn" onclick="togglevideo('video_finaltrip')">游戏视频</button>
+                <div id="video_finaltrip" class="videobox">
+                    <iframe
+                        src="https://player.bilibili.com/player.html?aid=587303971&bvid=BV1EB4y1P7pq&cid=314927730&page=1&high_quality=1&danmaku=0"
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true">
+                    </iframe>
+                </div>
+
+                <!-- 下载链接 -->
+                <p>
+                    <a href="https://pan.baidu.com/s/1gcbR3A44xxGJqOeajLNz0Q">游戏下载</a>&nbsp;&nbsp;&nbsp;
+                    <span>提取码：</span>
+                    <textarea id="copy_finaltrip" class="copycontent" readonly>guzn</textarea>
+                    <button onclick="copy('copy_finaltrip')">复制</button>
+                </p>
+
+                <hr class="vconnect" />
+                <!-- 制作信息 -->
+                <p>汪汪大队出品</p>
+                <p>策划：阿糸</p>
+                <p>美术：晨雾、旺财</p>
+                <p>程序：羚灯</p>
             </div>
 
         </div>
+        <hr class="segment" /><!-- 故事============================================================== -->
+        <div class="part" id="story">
+            <div class="blackblock"><span class="title">故事</span></div>
 
+            <div>
+                <a href="./file/烟囱.pdf" target="_blank" style="font-weight: bold;">《烟囱》</a>
+                <hr class="connect" />
+                <a href="./file/塑胶做的花.pdf" target="_blank" style="font-weight: bold;">《塑胶做的花》</a>
+                <hr class="connect" />
+                <a href="./file/鱼和护卫队.pdf" target="_blank" style="font-weight: bold;">《鱼和护卫队》</a>
+            </div>
+
+        </div>
     </div>
 </body>
 

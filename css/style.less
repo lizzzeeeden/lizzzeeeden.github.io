@@ -1,0 +1,208 @@
+@m_black: rgb(30, 30, 30);
+@m_white: rgb(230, 230, 230);
+@m_orange: rgb(250, 126, 81);
+@m_blue: rgb(121, 223, 241);
+
+/* 全局=========================================== */
+body {
+    background-color: @m_black;
+}
+
+#framework {
+    width: 80%;
+    max-width: 50rem;
+    margin: auto;
+
+    margin-bottom: 5rem;
+}
+
+p,
+span {
+    line-height: 1.5rem;
+    color: @m_white;
+}
+
+/* 按键 */
+button {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    transition: all 0.4s;
+
+    border: solid @m_white 2px;
+    color: @m_white;
+
+    &:hover {
+        border-color: @m_orange;
+        background-color: @m_orange;
+        color: @m_black;
+    }
+
+    &:active {
+        border-color: @m_blue;
+        background-color: @m_blue;
+        color: @m_black;
+        transition-duration: 0s;
+    }
+}
+
+/* 长分割 */
+hr.segment {
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+
+    border: 0;
+    height: 0.2rem;
+    background-image: linear-gradient(to right, rgba(230, 230, 230, 0), rgba(230, 230, 230, 0.7), rgba(230, 230, 230, 0));
+}
+
+/* 短连接 */
+hr.connect {
+    width: 5rem;
+
+    margin: 0.2rem 1rem;
+
+    border: none;
+    border-top: 5px dashed rgb(88, 88, 88);
+
+    display: inline-block;
+}
+
+/* 竖短连接 */
+hr.vconnect {
+    margin-left: 2rem;
+    width: 0.5rem;
+    height: 1rem;
+
+    border: none;
+    border-left: 5px dashed rgb(88, 88, 88);
+
+}
+
+
+/* 超链接 */
+a {
+    &:link {
+        color: @m_orange;
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: @m_blue;
+    }
+}
+
+/* 头 */
+#head div {
+    max-width: 25rem;
+    height: 7rem;
+    line-height: 7rem;
+    border-radius: 15px;
+
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+    border: 0.5rem double @m_white;
+
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+/* 白框 */
+div.blackblock {
+    background-color: @m_white;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 10px;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+/* 每行标题 */
+span.title {
+    color: @m_black;
+    font-size: 1.3rem;
+}
+
+/* 故事 ===========================================================*/
+#story{
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+/* 交互故事 ========================================================*/
+div#interactstory a {
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+
+
+/* 游戏 ========================================================*/
+.gamebox {
+    border: rgb(110, 110, 110) solid;
+    border-radius: 20px;
+    padding: 1rem;
+    padding-top: 0;
+    margin: 3rem auto;
+}
+
+.gamename {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem;
+    margin-left: 0;
+}
+.videobtn{
+    &:hover{
+        color: @m_black;
+        background-color: @m_orange;
+        border: solid  @m_orange 2px;
+    }
+}
+// 展开视频后的样式，展开后加上这个类名
+.openvideobtn {
+    color:@m_black;
+    background-color: @m_blue;
+    border: solid  @m_blue 2px;
+
+    &:hover{
+        background-color: @m_blue;
+        border: solid  @m_blue 2px;
+    }
+}
+
+.videobox{
+    text-align: center;
+
+    transition: all 0.5s;
+    // 要改变的值
+    width: 0%;
+
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: 5px;
+
+        margin: 1rem auto;
+    }
+}
+
+
+/* 复制的验证码 */
+.copycontent {
+    width: 2rem;
+    height: 1rem;
+    vertical-align: middle;
+    background-color: @m_black;
+    color: @m_white;
+}

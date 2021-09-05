@@ -108,12 +108,12 @@ div#interactstory a {
 }
 /* 游戏 ========================================================*/
 .gamebox {
+  display: inline-block;
   border: #6e6e6e solid;
   border-radius: 20px;
   padding: 1rem;
   padding-top: 0;
-  width: 40%;
-  display: inline-block;
+  width: 43%;
   margin: 2rem 0.5rem;
   vertical-align: top;
   transition: all 0.5s ease;

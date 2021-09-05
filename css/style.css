@@ -112,7 +112,11 @@ div#interactstory a {
   border-radius: 20px;
   padding: 1rem;
   padding-top: 0;
-  margin: 3rem auto;
+  width: 43%;
+  display: inline-block;
+  margin: 2rem 0.5rem;
+  vertical-align: top;
+  transition: all 0.5s ease;
 }
 .gamename {
   font-size: 1.2rem;

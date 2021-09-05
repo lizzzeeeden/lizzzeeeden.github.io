@@ -22,7 +22,7 @@ function togglevideo(id) {
         btn.setAttribute("class", "videobtn openvideobtn");
     } else { //视频关闭
         //修改gamebox宽
-        box.style.width = "43%";
+        box.style.width = "39%";
 
         //修改视频大小
         video.style.width = "0%";

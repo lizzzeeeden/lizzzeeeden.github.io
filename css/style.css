@@ -107,6 +107,9 @@ div#interactstory a {
   line-height: 3rem;
 }
 /* 游戏 ========================================================*/
+#game {
+  text-align: justify;
+}
 .gamebox {
   display: inline-block;
   border: #6e6e6e solid;
@@ -114,9 +117,9 @@ div#interactstory a {
   padding: 1rem;
   padding-top: 0;
   min-width: 15rem;
-  width: 35%;
-  margin: 2rem 0.5rem;
+  width: 43%;
   vertical-align: top;
+  margin-top: 3rem;
   transition: all 0.5s ease;
 }
 .gamename {

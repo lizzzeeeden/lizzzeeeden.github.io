@@ -1,6 +1,7 @@
 @m_black: rgb(30, 30, 30);
 @m_white: rgb(230, 230, 230);
 @m_orange: rgb(250, 126, 81);
+// @m_blue: rgb(0, 255, 255);
 @m_blue: rgb(121, 223, 241);
 
 /* 全局=========================================== */
@@ -20,6 +21,14 @@ p,
 span {
     line-height: 1.5rem;
     color: @m_white;
+}
+/*图标*/
+.ico{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-left:1rem;
+    position: relative;
+    top: 0.3rem;
 }
 
 /* 按键 */
@@ -82,6 +91,7 @@ hr.vconnect {
 
 /* 超链接 */
 a {
+    line-height: 1.5rem;
     &:link {
         color: @m_orange;
         text-decoration: none;
@@ -93,6 +103,12 @@ a {
 
     &:visited {
         color: @m_blue;
+    }
+}
+/*图片超链接*/
+.a_img{
+    &:hover {
+        text-decoration:none;
     }
 }
 
@@ -115,7 +131,7 @@ a {
 
 /* 白框 */
 div.blackblock {
-    background-color: @m_white;
+    background-color: rgb(245, 245, 245);
     width: 10rem;
     height: 3rem;
     border-radius: 10px;
@@ -124,6 +140,7 @@ div.blackblock {
     margin-bottom: 1rem;
     line-height: 3rem;
     text-align: center;
+    text-align-last: center;
 }
 
 /* 每行标题 */
@@ -138,6 +155,7 @@ span.title {
     line-height: 3rem;
 }
 
+
 /* 交互故事 ========================================================*/
 div#interactstory a {
     font-size: 1.2rem;
@@ -148,9 +166,12 @@ div#interactstory a {
 
 /* 游戏 ========================================================*/
 #game{
-    text-align: justify;
+    text-align: justify;//向两端对齐，最后一行会失效因此加上last一条，只对gamebox作用，gamebox里的内容需要left
+    text-align-last: justify;
 }
 .gamebox {
+    text-align-last:left;
+
     display: inline-block;
 
     border: rgb(110, 110, 110) solid;
@@ -163,10 +184,9 @@ div#interactstory a {
     min-width: 15rem;
     width: 43%;//要改变的值
     vertical-align: top;
-    margin-top: 3rem;
+    margin-top: 2rem;
     transition: all 0.5s ease;
 }
-
 .gamename {
     font-size: 1.2rem;
     font-weight: bold;
@@ -191,7 +211,6 @@ div#interactstory a {
         border: solid  @m_blue 2px;
     }
 }
-
 .videobox{
     text-align: center;
 
@@ -217,4 +236,29 @@ div#interactstory a {
     vertical-align: middle;
     background-color: @m_black;
     color: @m_white;
+}
+
+/* 随笔 ========================================================*/
+// #article{
+// }
+.articlebox{
+    display: inline-block;
+
+    border: rgb(110, 110, 110) solid;
+    border-radius: 10px;
+    padding: 1rem;
+    padding-top: 0;
+    // margin: 3rem auto;
+    margin-bottom: 5rem;
+
+    min-width: 15rem;
+    width: 43%;
+    vertical-align: top;
+    margin-top: 2rem;
+}
+.articlehead{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem;
+    margin-left: 0;
 }

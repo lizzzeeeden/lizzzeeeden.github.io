@@ -12,7 +12,7 @@ function togglevideo(id) {
     btn = document.getElementById("videobtn_" + id);
 
 
-    // 第一次载入0会变成空字符串，因此用这个判断
+    // 第一次载入0会变成空字符串，因此用这个判断/////////////////////////把这个写到csdn上去
     if (video.style.width != "100%") { //视频展开
         //修改gamebox宽
         box.style.width = "100%";

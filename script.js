@@ -1,9 +1,58 @@
+//导航
+window.onload = function () {
+    list = document.getElementById("nav_list");
+    pos_itrstory = document.getElementById("interactstory");
+    pos_game = document.getElementById("game");
+    pos_article = document.getElementById("article");
+}
+
+function more() {
+    if (list.style.height != "15rem") {
+        list.style.height = "15rem";
+    } else {
+        list.style.height = "0";
+    }
+}
+
+function goitrstory() {
+    window.scrollTo({
+        top: pos_itrstory.offsetTop,
+        behavior: 'smooth',
+    })
+}
+
+function gogame() {
+    window.scrollTo({
+        top: pos_game.offsetTop,
+        behavior: 'smooth',
+    })
+}
+
+function goarticle() {
+    window.scrollTo({
+        top: pos_article.offsetTop,
+        behavior: 'smooth',
+    })
+}
+
+function gotop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    })
+}
+
+function gobottom() {
+    window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth',
+    })
+}
 //复制百度网盘验证码
 function copy(id) {
     document.getElementById(id).select(); // 选择对象
     document.execCommand("Copy"); // 执行浏览器复制命令
 }
-
 
 //点击展开视频
 function togglevideo(id) {
@@ -22,7 +71,7 @@ function togglevideo(id) {
         btn.setAttribute("class", "videobtn openvideobtn");
     } else { //视频关闭
         //修改gamebox宽
-        box.style.width = "43%";
+        box.style.width = "47%";
 
         //修改视频大小
         video.style.width = "0%";

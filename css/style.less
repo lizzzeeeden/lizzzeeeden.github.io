@@ -13,8 +13,7 @@ body {
     width: 80%;
     max-width: 50rem;
     margin: auto;
-
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 p,
@@ -59,7 +58,6 @@ button {
 hr.segment {
     margin-top: 4rem;
     margin-bottom: 2rem;
-
     border: 0;
     height: 0.2rem;
     background-image: linear-gradient(to right, rgba(230, 230, 230, 0), rgba(230, 230, 230, 0.7), rgba(230, 230, 230, 0));
@@ -109,6 +107,7 @@ a {
 .a_img{
     &:hover {
         text-decoration:none;
+        filter: brightness(80%);
     }
 }
 
@@ -130,7 +129,7 @@ a {
 }
 
 /* 白框 */
-div.blackblock {
+div.whiteblock {
     background-color: rgb(245, 245, 245);
     width: 10rem;
     height: 3rem;
@@ -148,7 +147,45 @@ span.title {
     color: @m_black;
     font-size: 1.3rem;
 }
+/* 导航 ===========================================================*/
+#navigation{
+    position: fixed;
+    right: 0;
+}
+#ico_more{
+    margin-left: 2.5rem;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 0.4rem;
+}
+#ico_more img{
+    width: 2rem;
+    height: 2rem;
+    &:hover {
+        text-decoration:none;
+        filter: brightness(80%);
+    }
+}
+#navigation button{
+    background-color: @m_black;
+    width: 7rem;
+    font-size: 1rem;
+    height: 3rem;
 
+    &:hover {
+        background-color: @m_orange;
+    }
+
+    &:active {
+        background-color: @m_blue;
+    }
+}
+#nav_list{
+    overflow: hidden;
+    height: 0;//3*5，nav-list改动数量记得修改，js脚本里动画也要修改
+    transition: height 0.2s ease;
+}
 /* 故事 ===========================================================*/
 #story{
     font-size: 1.2rem;
@@ -170,10 +207,12 @@ div#interactstory a {
     text-align-last: justify;
 }
 .gamebox {
+    text-align: left;
     text-align-last:left;
 
     display: inline-block;
 
+    box-sizing: border-box;//内边框配padding不会超出外部的div
     border: rgb(110, 110, 110) solid;
     border-radius: 20px;
     padding: 1rem;
@@ -181,8 +220,8 @@ div#interactstory a {
     // margin: 3rem auto;
 
     //并列排序，点击游戏视频则单独成行
-    min-width: 15rem;
-    width: 43%;//要改变的值
+    min-width: 19rem;
+    width: 47%;//要改变的值
     vertical-align: top;
     margin-top: 2rem;
     transition: all 0.5s ease;
@@ -239,19 +278,21 @@ div#interactstory a {
 }
 
 /* 随笔 ========================================================*/
-// #article{
-// }
+#article{
+    text-align-last: justify;
+}
 .articlebox{
     display: inline-block;
+    text-align-last: left;
 
     border: rgb(110, 110, 110) solid;
     border-radius: 10px;
     padding: 1rem;
     padding-top: 0;
     // margin: 3rem auto;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 
-    min-width: 15rem;
+    min-width: 17rem;
     width: 43%;
     vertical-align: top;
     margin-top: 2rem;

@@ -118,20 +118,22 @@ span.title {
   position: fixed;
   right: 0;
 }
-#ico_more {
+#navigation a {
   margin-left: 2.5rem;
   width: 2rem;
   height: 2rem;
   position: relative;
   top: 0.4rem;
 }
-#ico_more img {
-  width: 2rem;
-  height: 2rem;
+#ico_more {
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 60%;
 }
-#ico_more img:hover {
+#ico_more:hover {
   text-decoration: none;
-  filter: brightness(80%);
+  opacity: 100%;
+  filter: brightness(300%);
 }
 #navigation button {
   background-color: #1e1e1e;

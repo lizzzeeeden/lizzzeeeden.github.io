@@ -1,5 +1,6 @@
 //导航
 window.onload = function () {
+    ico_more = document.getElementById("ico_more");
     list = document.getElementById("nav_list");
     pos_itrstory = document.getElementById("interactstory");
     pos_game = document.getElementById("game");
@@ -9,8 +10,10 @@ window.onload = function () {
 function more() {
     if (list.style.height != "15rem") {
         list.style.height = "15rem";
+        ico_more.style.opacity = "90%";
     } else {
         list.style.height = "0";
+        ico_more.style.opacity = "60%";
     }
 }
 

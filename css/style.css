@@ -43,7 +43,7 @@ button:active {
 }
 /* 长分割 */
 hr.segment {
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   border: 0;
   height: 0.2rem;

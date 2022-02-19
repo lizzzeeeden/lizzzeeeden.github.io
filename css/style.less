@@ -1,5 +1,6 @@
-@m_black: rgb(30, 30, 30);
-@m_white: rgb(230, 230, 230);
+@m_black_box:#222;
+@m_black: #171717;
+@m_white: #f5f5f5;
 @m_orange: rgb(250, 126, 81);
 // @m_blue: rgb(0, 255, 255);
 @m_blue: rgb(121, 223, 241);
@@ -11,7 +12,7 @@ body {
 
 #framework {
     width: 80%;
-    max-width: 50rem;
+    max-width: 75rem;
     margin: auto;
     margin-bottom: 2rem;
 }
@@ -34,7 +35,7 @@ span {
 button {
     background-color: rgba(0, 0, 0, 0);
     padding: 0.2rem 0.5rem;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: all 0.4s;
 
     border: solid @m_white 2px;
@@ -56,11 +57,12 @@ button {
 
 /* 长分割 */
 hr.segment {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     border: 0;
-    height: 0.2rem;
-    background-image: linear-gradient(to right, rgba(230, 230, 230, 0), rgba(230, 230, 230, 0.7), rgba(230, 230, 230, 0));
+    height: 0.1rem;
+    background-color: #313131;
+    // background-image: linear-gradient(to right, rgba(230, 230, 230, 0), rgba(68, 68, 68, 0.7), rgba(230, 230, 230, 0));
 }
 
 /* 短连接 */
@@ -97,6 +99,8 @@ a {
 
     &:hover {
         text-decoration: underline;
+        text-underline-offset:0.3rem;
+        text-decoration-thickness: 0.17rem;
     }
 
     &:visited {
@@ -112,29 +116,32 @@ a {
 }
 
 /* 头 */
+#mainName{
+    &:hover {
+        text-decoration: none;
+    }
+}
 #head div {
-    max-width: 25rem;
-    height: 7rem;
-    line-height: 7rem;
-    border-radius: 15px;
+    width: 100%;
+    // border-radius: 5px;
 
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    // margin-bottom: 1rem;
 
-    border: 0.5rem double @m_white;
+    // border: 0.5rem double @m_white;
 
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
 
 }
 
-/* 白框 */
-div.whiteblock {
-    background-color: rgb(245, 245, 245);
-    width: 10rem;
-    height: 3rem;
-    border-radius: 10px;
+/* sketch框 */
+div.sketchbox {
+    background-color: @m_black_box;
+    border: rgb(48, 48, 48) solid 0.2rem;
+    border-radius: 5px;
 
+    // margin: auto;//居中
     margin-top: 1rem;
     margin-bottom: 1rem;
     line-height: 3rem;
@@ -144,13 +151,15 @@ div.whiteblock {
 
 /* 每行标题 */
 span.title {
-    color: @m_black;
-    font-size: 1.3rem;
+    color: @m_white;
+    font-size: 1.5rem;
+    font-weight: bold;
+
 }
 /* 导航 ===========================================================*/
 #navigation{
     position: fixed;
-    right: 0;
+    right: 1rem;
     z-index: 9999;
 }
 #navigation a{
@@ -161,17 +170,28 @@ span.title {
     top: 0.4rem;
 }
 #ico_more{
-    width: 2.5rem;
-    height: 2.5rem;
-    opacity:60%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 160px;
+    // opacity:60%;
     &:hover {
         text-decoration:none;
-        opacity: 100%;
-        filter: brightness(300%)
+        //opacity: 100%;
+        // filter: brightness(300%)
+        fill: @m_orange;
     }
+    fill: #aaaaaa;
+}
+#ico_more_on{
+    &:extend(#ico_more);
+    &:hover {
+        fill: @m_orange;
+    }
+    fill: @m_blue;
 }
 #navigation button{
     background-color: @m_black;
+    border-color: #747474;
     width: 7rem;
     font-size: 1rem;
     height: 3rem;
@@ -205,30 +225,54 @@ div#interactstory a {
 
 
 /* 游戏 ========================================================*/
-#game{
-    text-align: justify;//向两端对齐，最后一行会失效因此加上last一条，只对gamebox作用，gamebox里的内容需要left
-    text-align-last: justify;
-}
+// #game{
+    // text-align: justify;//向两端对齐，最后一行会失效因此加上last一条，只对gamebox作用，gamebox里的内容需要left
+    // text-align-last: justify;
+// }
 .gamebox {
     text-align: left;
     text-align-last:left;
 
     display: inline-block;
 
+    background-color: @m_black_box;
     box-sizing: border-box;//内边框配padding不会超出外部的div
-    border: rgb(110, 110, 110) solid;
-    border-radius: 20px;
+    border: rgb(48, 48, 48) solid 0.2rem;
+    border-radius: 5px;
     padding: 1rem;
     padding-top: 0;
     // margin: 3rem auto;
+    margin-right: 1rem;
 
     //并列排序，点击游戏视频则单独成行
     min-width: 19rem;
-    width: 47%;//要改变的值
+    width: 30%;//要改变的值
     vertical-align: top;
     margin-top: 2rem;
     transition: all 0.5s ease;
 }
+@media screen and (max-width: 825px) {
+    .gamebox {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 826px) and (max-width:1230px){
+    /*781~1170*/
+    .gamebox {
+        width: 47%;
+    }
+}
+@media screen and (min-width: 1231px){
+    /*1170~*/
+    .gamebox {
+        width: 30%;
+    }
+}
+.gamebox_unfold{
+    &:extend(.gamebox);
+    width: 100%;
+}
+
 .gamename {
     font-size: 1.2rem;
     font-weight: bold;
@@ -276,7 +320,7 @@ div#interactstory a {
     width: 2rem;
     height: 1rem;
     vertical-align: middle;
-    background-color: @m_black;
+    background-color: @m_black_box;
     color: @m_white;
 }
 
@@ -288,8 +332,9 @@ div#interactstory a {
     display: inline-block;
     text-align-last: left;
 
-    border: rgb(110, 110, 110) solid;
-    border-radius: 10px;
+    background-color: @m_black_box;
+    border: rgb(48, 48, 48) solid 0.2rem;
+    border-radius: 5px;
     padding: 1rem;
     padding-top: 0;
     // margin: 3rem auto;

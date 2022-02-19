@@ -10,10 +10,12 @@ window.onload = function () {
 function more() {
     if (list.style.height != "15rem") {
         list.style.height = "15rem";
-        ico_more.style.opacity = "90%";
+        // ico_more.style.opacity = "90%";
+        ico_more.id = "ico_more_on";
     } else {
         list.style.height = "0";
-        ico_more.style.opacity = "60%";
+        // ico_more.style.opacity = "60%";
+        ico_more.id = "ico_more";
     }
 }
 
@@ -67,14 +69,15 @@ function togglevideo(id) {
     // 第一次载入0会变成空字符串，因此用这个判断/////////////////////////把这个写到csdn上去
     if (video.style.width != "100%") { //视频展开
         //修改gamebox宽
-        box.style.width = "100%";
+        box.className = "gamebox_unfold";
+        //box.style.width = "100%";
         //修改视频大小
         video.style.width = "100%";
         //修改按键样式
         btn.setAttribute("class", "videobtn openvideobtn");
     } else { //视频关闭
-        //修改gamebox宽
-        box.style.width = "47%";
+        //恢复gamebox宽
+        box.className = "gamebox";
 
         //修改视频大小
         video.style.width = "0%";

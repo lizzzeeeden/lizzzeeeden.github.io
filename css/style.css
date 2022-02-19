@@ -1,17 +1,17 @@
 /* 全局=========================================== */
 body {
-  background-color: #1e1e1e;
+  background-color: #171717;
 }
 #framework {
   width: 80%;
-  max-width: 50rem;
+  max-width: 75rem;
   margin: auto;
   margin-bottom: 2rem;
 }
 p,
 span {
   line-height: 1.5rem;
-  color: #e6e6e6;
+  color: #f5f5f5;
 }
 /*图标*/
 .ico {
@@ -25,29 +25,29 @@ span {
 button {
   background-color: rgba(0, 0, 0, 0);
   padding: 0.2rem 0.5rem;
-  border-radius: 5px;
+  border-radius: 2px;
   transition: all 0.4s;
-  border: solid #e6e6e6 2px;
-  color: #e6e6e6;
+  border: solid #f5f5f5 2px;
+  color: #f5f5f5;
 }
 button:hover {
   border-color: #fa7e51;
   background-color: #fa7e51;
-  color: #1e1e1e;
+  color: #171717;
 }
 button:active {
   border-color: #79dff1;
   background-color: #79dff1;
-  color: #1e1e1e;
+  color: #171717;
   transition-duration: 0s;
 }
 /* 长分割 */
 hr.segment {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   border: 0;
-  height: 0.2rem;
-  background-image: linear-gradient(to right, rgba(230, 230, 230, 0), rgba(230, 230, 230, 0.7), rgba(230, 230, 230, 0));
+  height: 0.1rem;
+  background-color: #313131;
 }
 /* 短连接 */
 hr.connect {
@@ -75,6 +75,8 @@ a:link {
 }
 a:hover {
   text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 0.17rem;
 }
 a:visited {
   color: #79dff1;
@@ -85,23 +87,20 @@ a:visited {
   filter: brightness(80%);
 }
 /* 头 */
+#mainName:hover {
+  text-decoration: none;
+}
 #head div {
-  max-width: 25rem;
-  height: 7rem;
-  line-height: 7rem;
-  border-radius: 15px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  border: 0.5rem double #e6e6e6;
-  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+  text-align: left;
   font-size: 1.5rem;
 }
-/* 白框 */
-div.whiteblock {
-  background-color: #f5f5f5;
-  width: 10rem;
-  height: 3rem;
-  border-radius: 10px;
+/* sketch框 */
+div.sketchbox {
+  background-color: #222;
+  border: #303030 solid 0.2rem;
+  border-radius: 5px;
   margin-top: 1rem;
   margin-bottom: 1rem;
   line-height: 3rem;
@@ -110,13 +109,14 @@ div.whiteblock {
 }
 /* 每行标题 */
 span.title {
-  color: #1e1e1e;
-  font-size: 1.3rem;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 /* 导航 ===========================================================*/
 #navigation {
   position: fixed;
-  right: 0;
+  right: 1rem;
   z-index: 9999;
 }
 #navigation a {
@@ -126,18 +126,26 @@ span.title {
   position: relative;
   top: 0.4rem;
 }
-#ico_more {
-  width: 2.5rem;
-  height: 2.5rem;
-  opacity: 60%;
+#ico_more,
+#ico_more_on {
+  width: 3rem;
+  height: 3rem;
+  font-size: 160px;
+  fill: #aaaaaa;
 }
 #ico_more:hover {
   text-decoration: none;
-  opacity: 100%;
-  filter: brightness(300%);
+  fill: #fa7e51;
+}
+#ico_more_on {
+  fill: #79dff1;
+}
+#ico_more_on:hover {
+  fill: #fa7e51;
 }
 #navigation button {
-  background-color: #1e1e1e;
+  background-color: #171717;
+  border-color: #747474;
   width: 7rem;
   font-size: 1rem;
   height: 3rem;
@@ -164,24 +172,46 @@ div#interactstory a {
   line-height: 3rem;
 }
 /* 游戏 ========================================================*/
-#game {
-  text-align: justify;
-  text-align-last: justify;
-}
-.gamebox {
+.gamebox,
+.gamebox_unfold {
   text-align: left;
   text-align-last: left;
   display: inline-block;
+  background-color: #222;
   box-sizing: border-box;
-  border: #6e6e6e solid;
-  border-radius: 20px;
+  border: #303030 solid 0.2rem;
+  border-radius: 5px;
   padding: 1rem;
   padding-top: 0;
+  margin-right: 1rem;
   min-width: 19rem;
-  width: 47%;
+  width: 30%;
   vertical-align: top;
   margin-top: 2rem;
   transition: all 0.5s ease;
+}
+@media screen and (max-width: 825px) {
+  .gamebox,
+  .gamebox_unfold {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 826px) and (max-width: 1230px) {
+  /*781~1170*/
+  .gamebox,
+  .gamebox_unfold {
+    width: 47%;
+  }
+}
+@media screen and (min-width: 1231px) {
+  /*1170~*/
+  .gamebox,
+  .gamebox_unfold {
+    width: 30%;
+  }
+}
+.gamebox_unfold {
+  width: 100%;
 }
 .gamename {
   font-size: 1.2rem;
@@ -190,12 +220,12 @@ div#interactstory a {
   margin-left: 0;
 }
 .videobtn:hover {
-  color: #1e1e1e;
+  color: #171717;
   background-color: #fa7e51;
   border: solid #fa7e51 2px;
 }
 .openvideobtn {
-  color: #1e1e1e;
+  color: #171717;
   background-color: #79dff1;
   border: solid #79dff1 2px;
 }
@@ -220,8 +250,8 @@ div#interactstory a {
   width: 2rem;
   height: 1rem;
   vertical-align: middle;
-  background-color: #1e1e1e;
-  color: #e6e6e6;
+  background-color: #222;
+  color: #f5f5f5;
 }
 /* 随笔 ========================================================*/
 #article {
@@ -230,8 +260,9 @@ div#interactstory a {
 .articlebox {
   display: inline-block;
   text-align-last: left;
-  border: #6e6e6e solid;
-  border-radius: 10px;
+  background-color: #222;
+  border: #303030 solid 0.2rem;
+  border-radius: 5px;
   padding: 1rem;
   padding-top: 0;
   margin-bottom: 1rem;
